@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+
+    <h1>Expense Tracker</h1>
+    <p>Manage Your Income & Expenses</p>
+
+    <!-- Summary Cards -->
+    <div class="summary">
+
+        <div class="card balance">
+            <h3>Current Balance</h3>
+            <h2 id="currentBalance">₹0</h2>
+        </div>
+
+        <div class="card income">
+            <h3>Total Income</h3>
+            <h2 id="totalIncome">₹0</h2>
+        </div>
+
+        <div class="card expense">
+            <h3>Total Expense</h3>
+            <h2 id="totalExpense">₹0</h2>
+        </div>
+
+    </div>
+
+    <!-- Transaction Form -->
+    <div class="transaction-form">
+
+        <h2>Add Transaction</h2>
+
+        <input type="date" id="date">
+
+        <input type="text" id="description" placeholder="Description">
+
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="type">
+            <option value="">Select Type</option>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+        </select>
+
+        <select id="category">
+            <option value="">Select Category</option>
+            <option>Salary</option>
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Transport</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Other</option>
+        </select>
+
+        <button id="saveBtn">Save Transaction</button>
+
+    </div>
+
+    <!-- Filter -->
+    <div class="filter">
+
+        <h2>Filter Expenses</h2>
+
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option>Salary</option>
+            <option>Food</option>
+            <option>Shopping</option>
+            <option>Transport</option>
+            <option>Bills</option>
+            <option>Entertainment</option>
+            <option>Health</option>
+            <option>Education</option>
+            <option>Other</option>
+        </select>
+
+    </div>
+
+    <!-- Transaction History -->
+    <div class="history">
+
+        <h2>Transaction History</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="transactionList">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
