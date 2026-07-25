@@ -1,0 +1,462 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#2563eb;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:32px;
+}
+
+#themeBtn{
+    background:white;
+    color:#2563eb;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#themeBtn:hover{
+    background:#ddd;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+/* =========================
+   TASK FORM
+========================= */
+
+.task-form{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.task-form h2{
+    margin-bottom:20px;
+    color:#2563eb;
+}
+
+.task-form input,
+.task-form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.task-form input:focus,
+.task-form select:focus{
+    border:2px solid #2563eb;
+    outline:none;
+}
+
+#addTask{
+    width:100%;
+    background:#2563eb;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+#addTask:hover{
+    background:#1e40af;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section{
+    margin-top:25px;
+}
+
+#searchTask{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-section{
+    margin-top:20px;
+}
+
+#filterStatus{
+    width:250px;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* =========================
+   TASK TABLE
+========================= */
+
+.task-list{
+    margin-top:35px;
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+thead{
+    background:#2563eb;
+    color:white;
+}
+
+th,
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+tbody tr:hover{
+    background:#f1f5f9;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit-btn{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.edit-btn:hover{
+    background:#d97706;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+.complete-btn{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.complete-btn:hover{
+    background:#16a34a;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.completed{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.pending{
+    color:#ef4444;
+    font-weight:bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:40px;
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:992px){
+
+.summary{
+    grid-template-columns:repeat(2,1fr);
+}
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+#themeBtn{
+    width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.container{
+    width:95%;
+}
+
+.summary{
+    grid-template-columns:1fr;
+}
+
+.task-form{
+    padding:20px;
+}
+
+table{
+    font-size:14px;
+}
+
+th,
+td{
+    padding:10px;
+}
+
+#filterStatus{
+    width:100%;
+}
+
+}
+
+@media (max-width:480px){
+
+header h1{
+    font-size:24px;
+}
+
+.task-form h2{
+    font-size:22px;
+}
+
+#addTask{
+    font-size:16px;
+}
+
+.card p{
+    font-size:22px;
+}
+
+table{
+    font-size:12px;
+}
+
+}
+
+
+/* =========================
+   INPUT ANIMATION
+========================= */
+
+input,
+select{
+    transition:.3s;
+}
+
+input:hover,
+select:hover{
+    border-color:#2563eb;
+}
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   TABLE ANIMATION
+========================= */
+
+tbody tr{
+    transition:.3s;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode header{
+    background:#1e293b;
+}
+
+.dark-mode .task-form,
+.dark-mode .card,
+.dark-mode table{
+    background:#1f2937;
+    color:white;
+}
+
+.dark-mode input,
+.dark-mode select{
+    background:#374151;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark-mode footer{
+    background:#1e293b;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ddd;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1e40af;
+}
+
+/* =========================
+   COMPLETED TASK
+========================= */
+
+.completed-row{
+    background:#dcfce7 !important;
+    text-decoration:line-through;
+}
+
+.dark-mode .completed-row{
+    background:#14532d !important;
+}
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message{
+    text-align:center;
+    padding:30px;
+    color:#888;
+    font-size:18px;
+}
